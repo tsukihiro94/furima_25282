@@ -47,7 +47,8 @@
 | street_number| string       | null: false                   |
 | building_name| string       |                               |
 | postal_code  | string       | null: false                   |
-| user_id      | references   | null: false, foreign_key: true|
+| phone        | integer      | null: false                   |
+| item_id      | references   | null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
