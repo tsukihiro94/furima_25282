@@ -22,16 +22,21 @@
 
 
 ## items テーブル
-| Column  | Type         | Options                       |
-| --------| -------------| ------------------------------|
-| name    | string       | null: false                   |
-| info    | text         | null: false                   |
-| price   | integer      | null: false                   |
-| user_id | references   | null: false, foreign_key: true|
+| Column         | Type         | Options                       |
+| ---------------| -------------| ------------------------------|
+| name           | string       | null: false                   |
+| info           | text         | null: false                   |
+| category_id    | integer      | null: false                   |
+| item_status_id | integer      | null: false                   |
+| delivery_fee_id| integer      | null: false                   |
+| region_id      | integer      | null: false                   |
+| delivery_day_id| integer      | null: false                   |
+| price          | integer      | null: false                   |
+| user_id        | references   | null: false, foreign_key: true|
+
 
 ### Association
 - belongs_to :user
-- has_one :buyer
 - has_one_attached :image
 
 
