@@ -40,7 +40,7 @@
 - has_one_attached :image
 - has_one :address
 
-## address テーブル
+## addresses テーブル
 | Column       | Type         | Options                       |
 | -------------| -------------| ------------------------------|
 | city         | string       | null: false                   |
