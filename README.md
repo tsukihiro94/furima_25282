@@ -44,9 +44,9 @@
 | Column       | Type         | Options                       |
 | -------------| -------------| ------------------------------|
 | city         | string       | null: false                   |
-| street_number| integer      | null: false                   |
-| building_name| string       | null: false                   |
-| postal_code  | integer      | null: false                   |
+| street_number| string       | null: false                   |
+| building_name| string       |                               |
+| postal_code  | string       | null: false                   |
 | user_id      | references   | null: false, foreign_key: true|
 
 ### Association
