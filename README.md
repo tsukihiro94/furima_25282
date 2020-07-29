@@ -17,15 +17,15 @@
 | birth_day_id     | integer | null: false |
 
 ### Association
-- has_many :products
+- has_many :items
 - has_many :addresses
 
 
-## products テーブル
+## items テーブル
 | Column  | Type         | Options                       |
 | --------| -------------| ------------------------------|
 | name    | string       | null: false                   |
-| text    | text         | null: false                   |
+| info    | text         | null: false                   |
 | price   | integer      | null: false                   |
 | user_id | references   | null: false, foreign_key: true|
 
