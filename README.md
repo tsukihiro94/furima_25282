@@ -12,9 +12,7 @@
 | first_name       | string  | null: false |
 | family_name_kana | string  | null: false |
 | first_name_kana  | string  | null: false |
-| birth_year _id   | integer | null: false |
-| birth_month_id   | integer | null: false |
-| birth_day_id     | integer | null: false |
+| birthday         | date    | null: false |
 
 ### Association
 - has_many :items
