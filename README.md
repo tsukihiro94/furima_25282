@@ -31,7 +31,7 @@
 | region_id      | integer      | null: false                   |
 | delivery_day_id| integer      | null: false                   |
 | price          | integer      | null: false                   |
-| user_id        | references   | null: false, foreign_key: true|
+| user           | references   | null: false, foreign_key: true|
 
 
 ### Association
@@ -49,7 +49,7 @@
 | street_number| string       | null: false                   |
 | building_name| string       |                               |
 | phone        | string       | null: false                   |
-| item_id      | references   | null: false, foreign_key: true|
+| item         | references   | null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -57,8 +57,8 @@
 ## orders テーブル
 | Column       | Type         | Options                       |
 | -------------| -------------| ------------------------------|
-| user_id      | references   | null: false, foreign_key: true|
-| item_id      | references   | null: false, foreign_key: true|
+| user         | references   | null: false, foreign_key: true|
+| item         | references   | null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
