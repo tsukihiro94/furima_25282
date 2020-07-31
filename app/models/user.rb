@@ -7,6 +7,8 @@ class User < ApplicationRecord
          has_many :addresses
          has_one :order
 
-         validates :nickname, :family_name, :first_name, :family_name_kana,
-                   :first_name_kana, :birthday, presence: true
+         with_options presence: true do
+        
+         end
+
 end
