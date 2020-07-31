@@ -37,7 +37,6 @@
 ### Association
 - belongs_to :user
 - has_one_attached :image
-- has_one :address
 - has_one :order
 
 ## addresses テーブル
@@ -53,6 +52,7 @@
 
 ### Association
 - belongs_to :item
+- belongs_to :order
 
 ## orders テーブル
 | Column       | Type         | Options                       |
@@ -61,5 +61,6 @@
 | item         | references   | null: false, foreign_key: true|
 
 ### Association
+- has_one :address
 - belongs_to :user
 - belongs_to :item
