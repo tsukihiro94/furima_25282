@@ -6,8 +6,7 @@
 | -----------------| --------| ----------- |
 | nickname         | string  | null: false |
 | email            | string  | null: false |
-| password         | integer | null: false |
-| confirm_password | integer | null: false |
+| password         | string  | null: false |
 | family_name      | string  | null: false |
 | first_name       | string  | null: false |
 | family_name_kana | string  | null: false |
