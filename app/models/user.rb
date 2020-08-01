@@ -8,9 +8,11 @@ class User < ApplicationRecord
          has_one :order
 
          with_options presence: true do
-         validates :family_name, :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: "は全角で入力してください。"}
-         validates :family_name_kana, :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: "は全角カタカナで入力して下さい。"}
-
+         validates :nickname, :birthday
+         validates :password, format: {with: /\A(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}\z/, message: "Include both letters and numbers"}
+         validates :family_name, :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: "Full-width characters"}
+         validates :family_name_kana, :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: "Full-width katakana characters"}
+        
          end
 
 end
