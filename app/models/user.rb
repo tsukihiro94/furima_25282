@@ -8,7 +8,7 @@ class User < ApplicationRecord
          has_one :order
 
          with_options presence: true do
-         validates :nickname, uniqueness: { case_sensitive: false }
+         validates :nickname, uniqueness: { case_sensitive: true }
          validates :birthday
          validates :password, format: {with: /\A(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}\z/, message: "Include both letters and numbers"}
          validates :family_name, :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: "Full-width characters"}
