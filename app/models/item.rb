@@ -9,10 +9,10 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   has_one :order
-  has_one_attached :image
 
   with_options presence: true do
-    validates :category_id, :item_status, :delivery_fee, :region, :delivery_day, numericality: {other_than: 1 }
+    validates :image, :name, :info, :price
+    validates :category_id, :item_status_id, :delivery_fee_id, :region_id, :delivery_day_id, numericality: {other_than: 1 , message: "Select"}
   end
   
 end
