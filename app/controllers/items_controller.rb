@@ -27,7 +27,7 @@ end
 
   def move_to_index
     unless user_signed_in?
-      redirect_to '/users/sign_up'
+      redirect_to '/users/sign_in'
     end
   end
 end
