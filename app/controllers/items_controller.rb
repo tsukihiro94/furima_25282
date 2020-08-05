@@ -27,6 +27,11 @@ class ItemsController < ApplicationController
     def edit
       
     end
+
+    def update
+      item = Item.find(params[:id]).update(item_params)
+      redirect_to action: :show
+    end
   private
 
     def item_params
