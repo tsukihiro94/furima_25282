@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   
   before_action :authenticate_user!, only: :new
-  before_action :set_item, only: :show
+  before_action :set_item, only: [:show, :edit, :update]
     def index
       @items = Item.all
     end
@@ -22,6 +22,19 @@ class ItemsController < ApplicationController
 
     def show
       
+    end
+
+    def edit
+      
+    end
+
+    def update
+      @item.update(item_params)
+      if @item.save
+        redirect_to action: :show
+      else
+        render :edit
+      end
     end
   private
 
