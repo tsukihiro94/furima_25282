@@ -5,10 +5,10 @@ class OrderAddress
 
 
   with_options presence: true do
-    validates :postal_code, format: {with:/\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
+    validates :postal_code,  format: {with:/\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
     validates :region_id, numericality: { other_than: 1, message: "can't be blank" }
     validates :city, :street_number
-    validates :phone, format: {with: /\A\d{11}\z/ }
+    validates :phone, numericality: {only_interger: :ture, message: "is not a number",format: {with: /\A[0-9]{11}\z/,  meesage:"can't be blank"}}
   end
 
   def save
