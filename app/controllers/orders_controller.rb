@@ -3,9 +3,11 @@ class OrdersController < ApplicationController
     before_action :go_to_index, only: :index
   
     def index
-      if current_user.id == @item.user_id 
-        redirect_to items_path
-      end
+      
+     if current_user.id == @item.user_id 
+       redirect_to items_path
+     end
+     
       @order = OrderAddress.new
     end
     
