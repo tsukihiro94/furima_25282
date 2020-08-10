@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
     before_action :set_item, only: [:index, :create, :pay_item]
-    
+    before_action :go_to_index, only: :index
   
     def index
       if current_user.id == @item.user_id 
@@ -41,4 +41,11 @@ class OrdersController < ApplicationController
         currency:'jpy'
       )
     end
+
+    def go_to_index
+      if @item.order != nil 
+        redirect_to items_path
+      end
+    end
+
 end
