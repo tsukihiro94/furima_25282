@@ -15,7 +15,7 @@
 
 ### Association
 - has_many :items
-- has_many :addresses
+- has_one :address
 - has_one :order
 
 
@@ -47,11 +47,10 @@
 | street_number| string       | null: false                   |
 | building_name| string       |                               |
 | phone        | string       | null: false                   |
-| item         | references   | null: false, foreign_key: true|
+| user         | references   | null: false, foreign_key: true|
 
 ### Association
-- belongs_to :item
-- belongs_to :order
+- belongs_to :user
 
 ## orders テーブル
 | Column       | Type         | Options                       |
@@ -60,6 +59,5 @@
 | item         | references   | null: false, foreign_key: true|
 
 ### Association
-- has_one :address
 - belongs_to :user
 - belongs_to :item
