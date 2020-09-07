@@ -68,9 +68,14 @@
 
 .brand-list {
   text-decoration: none;
+  margin-right: 3vw;
   color: #333333;
 }
 
+.item-list{
+  text-decoration: none;
+  color: #333333;
+}
 .lists-right {
   display: flex;
   list-style: none;
